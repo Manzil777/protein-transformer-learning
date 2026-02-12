@@ -1,0 +1,36 @@
+# CodeRabbit Configuration File
+# Documentation: https://docs.coderabbit.ai/guides/configure-coderabbit
+
+language: "en-US"
+tone_instructions: "Run a professional code review. Focus on performance, security, and React best practices."
+
+early_access: false
+
+reviews:
+  profile: "chill" # 'chill', 'assertive', or 'stricter'
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: true # Because why not?
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    ignore_title_keywords:
+      - "WIP"
+      - "Draft"
+
+chat:
+  auto_reply: true
+
+# Files to ignore during review
+ignore:
+  - "package-lock.json"
+  - "pnpm-lock.yaml"
+  - "yarn.lock"
+  - "venv/**"
+  - "node_modules/**"
+  - "*.min.js"
+  - "dist/**"
+  - "build/**"
+  - "protein/*.csv" # Large data files
+  - "protein/*.joblib"
+  - "protein/*.pdb"
