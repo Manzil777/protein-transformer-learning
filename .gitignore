@@ -46,3 +46,13 @@ notebooks/.ipynb_checkpoints/
 
 # Results (generated)
 results/
+get-shit-done-for-antigravity/
+
+# GSD Files
+PLAN.md
+STATE.md
+task.md
+.gemini/
+
+.agent/
+.gsd/

@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Sparkles, RefreshCw, AlertCircle, AlertTriangle, Info, CheckCircle, Activity, ChevronDown, ChevronUp } from 'lucide-react'
 import axios from 'axios'
 

@@ -1,0 +1,12 @@
+{
+    "name": "protein-classifier-root",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"source venv/bin/activate && python app.py\" \"cd frontend && npm run dev\"",
+        "install:all": "pip install -r requirements.txt && cd frontend && npm install && cd .. && npm install"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2"
+    }
+}

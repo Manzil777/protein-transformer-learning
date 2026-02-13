@@ -3,6 +3,7 @@ API endpoint tests for the Protein Classification backend.
 Tests cover: input validation, rate limiting, error handling, and core endpoints.
 """
 import unittest
+import unittest.mock
 import json
 import sys
 import os
@@ -151,8 +152,15 @@ class TestRateLimiting(unittest.TestCase):
         app.config['TESTING'] = True
         cls.client = app.test_client()
 
-    def test_rate_limit_headers(self):
+    @unittest.mock.patch('requests.post')
+    def test_rate_limit_headers(self, mock_post):
         """Send many rapid requests and verify rate limit kicks in."""
+        # Mock a successful response so the API call doesn't fail
+        mock_response = unittest.mock.Mock()
+        mock_response.status_code = 200
+        mock_response.text = "PDB_DATA"
+        mock_post.return_value = mock_response
+
         # The fold endpoint has the tightest limit (10/min)
         responses = []
         for _ in range(12):

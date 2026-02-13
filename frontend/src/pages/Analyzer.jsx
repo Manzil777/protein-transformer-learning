@@ -2,9 +2,11 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { ArrowLeft, Sparkles } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowLeft, Sparkles, Microscope } from 'lucide-react'
 import InputSection from '../components/InputSection'
 import BatchResults from '../components/BatchResults'
+import ResultsDashboard from '../components/ResultsDashboard'
 import SkeletonDashboard from '../components/SkeletonDashboard'
 import { exportCSV } from '../utils/exportUtils'
 

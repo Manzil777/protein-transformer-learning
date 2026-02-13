@@ -12,6 +12,10 @@ from functools import wraps
 from google import genai
 from src.embedding_extractor import EmbeddingExtractor
 from sklearn.decomposition import PCA
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # --- [P4-Logging] Configure structured logging ---
 logging.basicConfig(

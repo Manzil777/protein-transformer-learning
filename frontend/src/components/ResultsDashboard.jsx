@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { CheckCircle, AlertTriangle, Info, Box, Activity, Download, Printer } from 'lucide-react'
 import { exportCSV, exportPDF } from '../utils/exportUtils'
 import EmbeddingChart from './EmbeddingChart'
