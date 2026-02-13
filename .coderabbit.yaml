@@ -7,7 +7,7 @@ tone_instructions: "Run a professional code review. Focus on performance, securi
 early_access: false
 
 reviews:
-  profile: "chill" # 'chill', 'assertive', or 'stricter'
+  profile: "assertive" # 'chill', 'assertive', or 'stricter'
   request_changes_workflow: false
   high_level_summary: true
   poem: true # Because why not?

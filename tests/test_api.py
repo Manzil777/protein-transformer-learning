@@ -152,7 +152,7 @@ class TestRateLimiting(unittest.TestCase):
         app.config['TESTING'] = True
         cls.client = app.test_client()
 
-    @unittest.mock.patch('requests.post')
+    @unittest.mock.patch('app.http_requests.post')
     def test_rate_limit_headers(self, mock_post):
         """Send many rapid requests and verify rate limit kicks in."""
         # Mock a successful response so the API call doesn't fail
